@@ -1,0 +1,12 @@
+{
+  "name": "Commit Message Reminder",
+  "version": "1.0.0",
+  "description": "Reminds about Conventional Commits format when starting a commit",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Provide a quick reminder about Conventional Commits format:\n\nFormat: <type>(<scope>): <subject>\n\nTypes:\n- feat: New feature\n- fix: Bug fix  \n- docs: Documentation\n- style: Formatting\n- refactor: Code restructure\n- perf: Performance\n- test: Tests\n- build: Build system\n- ci: CI/CD\n- chore: Maintenance\n\nExamples:\n- feat(agent): add search tool\n- fix(rag): resolve memory leak\n- docs: update setup guide\n\nRules:\n✓ Type lowercase\n✓ Present tense (add, not added)\n✓ No period at end\n✓ Keep under 50 chars"
+  }
+}

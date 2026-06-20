@@ -1,0 +1,13 @@
+{
+  "name": "Validate Commit Message",
+  "version": "1.0.0",
+  "description": "Validates commit messages against Conventional Commits specification before committing",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": ".*git.*commit.*"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "CRITICAL: Before allowing this commit, you MUST validate the commit message follows Conventional Commits format.\n\nThe commit message MUST match this pattern:\n<type>(<scope>): <subject>\n\nValid types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert\n\nRules:\n1. Type must be lowercase\n2. Subject must be present tense (add, not added)\n3. Subject must not end with period\n4. Subject should be under 50 characters\n5. Scope is optional but must be lowercase if present\n\nExamples of VALID commits:\n- feat: add new feature\n- feat(agent): add search tool\n- fix(rag): resolve memory leak\n- docs: update README\n\nExamples of INVALID commits:\n- added new feature (no type)\n- Feat: add feature (uppercase type)\n- feat: added feature (past tense)\n- feat: add feature. (period at end)\n\nIf the commit message is INVALID, you MUST:\n1. REJECT the commit by saying 'COMMIT REJECTED'\n2. Explain what's wrong\n3. Provide the corrected version\n4. DO NOT proceed with any git operations\n\nIf the commit message is VALID:\n1. Say 'COMMIT APPROVED'\n2. Allow the operation to proceed\n\nNow validate the commit message in the tool parameters."
+  }
+}

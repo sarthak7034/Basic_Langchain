@@ -2,6 +2,8 @@
 
 A comprehensive, free, and local learning resource for building agentic AI systems using the LangChain ecosystem.
 
+> **⚠️ IMPORTANT**: This project enforces [Conventional Commits](https://www.conventionalcommits.org/). All commits must follow the format: `<type>(<scope>): <subject>`. See [COMMIT_FORMAT.md](COMMIT_FORMAT.md) for details.
+
 ## 🎯 Project Overview
 
 This project provides hands-on examples and tutorials for learning agentic AI development from beginner to intermediate level. All examples run locally and use free models and tools.
