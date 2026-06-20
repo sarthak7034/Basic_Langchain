@@ -1,0 +1,43 @@
+# Core LangChain packages
+langchain==0.1.0
+langchain-community==0.0.13
+langchain-core==0.1.10
+langgraph==0.0.20
+
+# LLM Providers (local and cloud)
+ollama==0.1.6
+
+# Optional: Cloud providers (comment out if not using)
+# openai==1.7.2
+# anthropic==0.8.1
+
+# Vector Stores
+chromadb==0.4.22
+faiss-cpu==1.7.4
+
+# Document Loaders
+pypdf==3.17.4
+python-docx==1.1.0
+beautifulsoup4==4.12.3
+requests==2.31.0
+
+# Embeddings
+sentence-transformers==2.2.2
+
+# Tools and Utilities
+duckduckgo-search==4.1.1
+wikipedia==1.4.0
+python-dotenv==1.0.0
+
+# UI and API
+streamlit==1.29.0
+fastapi==0.109.0
+uvicorn==0.25.0
+
+# Development
+jupyter==1.0.0
+black==23.12.1
+pytest==7.4.3
+
+# Monitoring (optional)
+langsmith==0.0.77
