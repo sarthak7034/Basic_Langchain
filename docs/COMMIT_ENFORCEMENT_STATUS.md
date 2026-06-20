@@ -1,16 +1,17 @@
 # Commit Enforcement Status
 
-Conventional Commit messages are enforced locally with Husky and commitlint.
+Conventional Commit messages are enforced locally with pre-commit.
 
 ## Installation
 
-Run the following from the repository root after cloning:
+Install dependencies and the `commit-msg` hook from the repository root:
 
 ```bash
-npm install
+pip install -r requirements.txt
+pre-commit install --hook-type commit-msg
 ```
 
-The `prepare` script installs the Husky `commit-msg` hook. The hook validates messages using [commitlint.config.cjs](../commitlint.config.cjs).
+The hook validates messages using [scripts/validate_commit.py](../scripts/validate_commit.py) and [.pre-commit-config.yaml](../.pre-commit-config.yaml).
 
 ## Verification
 

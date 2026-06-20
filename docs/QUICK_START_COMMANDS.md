@@ -103,7 +103,7 @@ start https://github.com/YOUR_USERNAME/AgentAI/compare/test/pr-workflow?expand=1
 
 ```powershell
 # Install local commit hook
-npm install
+pre-commit install --hook-type commit-msg
 
 # Check remote is set
 git remote -v
@@ -156,7 +156,7 @@ git credential-manager delete https://github.com
 
 ```powershell
 # Reinstall hooks
-npm install
+pre-commit install --hook-type commit-msg
 
 # Try commit again
 git commit -m "test: verify hook"

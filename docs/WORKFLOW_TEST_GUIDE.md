@@ -213,10 +213,10 @@ git push -u origin main
 
 ```powershell
 # Verify hook exists
-npm install
+pre-commit install --hook-type commit-msg
 
 # If false, run:
-npm install
+pre-commit install --hook-type commit-msg
 
 # Try commit again
 ```

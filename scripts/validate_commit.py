@@ -6,6 +6,7 @@ Validates commit messages against Conventional Commits specification
 
 import re
 import sys
+from pathlib import Path
 
 # Valid commit types
 VALID_TYPES = [
@@ -97,6 +98,9 @@ def main():
     if sys.argv[1] == '-':
         # Read from stdin
         message = sys.stdin.read()
+    elif len(sys.argv) == 2 and Path(sys.argv[1]).is_file():
+        # Git passes the path to the commit message file to commit-msg hooks.
+        message = Path(sys.argv[1]).read_text(encoding='utf-8')
     else:
         # Read from argument
         message = ' '.join(sys.argv[1:])
@@ -104,11 +108,11 @@ def main():
     is_valid, errors = validate_commit_message(message)
     
     if is_valid:
-        print("✅ Commit message is valid!")
+        print("Commit message is valid.")
         print(f"\nMessage:\n{message}")
         return 0
     else:
-        print("❌ Commit message is invalid!\n")
+        print("Commit message is invalid.\n")
         print("Errors:")
         for error in errors:
             print(f"  - {error}")
