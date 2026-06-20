@@ -10,34 +10,116 @@ ENV/
 *.egg-info/
 dist/
 build/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Environment
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables
 .env
 .env.local
+.env.*.local
 
 # IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
+*.swn
+*~
+.project
+.pydevproject
+.settings/
 
-# Jupyter
+# Jupyter Notebooks
 .ipynb_checkpoints/
 *.ipynb
+.jupyter/
 
-# Databases
+# Databases & Vector Stores
 *.db
 *.sqlite
+*.sqlite3
 chroma_db/
+faiss_index/
+*.index
 
 # Logs
 *.log
+logs/
+*.log.*
 
-# OS
+# OS Files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
 
-# Project specific
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Project Specific
 temp/
 output/
 downloads/
+data/
+!data/.gitkeep
+experiments/
+scratch/
+*.tmp
+
+# LangChain / LLM
+.langchain/
+langsmith_cache/
+
+# Model files (if you download any)
+*.bin
+*.safetensors
+*.gguf
+models/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Package manager
+poetry.lock
+Pipfile.lock
+
+# Secrets (just in case)
+secrets/
+*.key
+*.pem
+credentials.json
+service-account.json
