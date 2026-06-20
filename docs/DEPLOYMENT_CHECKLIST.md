@@ -8,7 +8,7 @@ Complete checklist for deploying your AgentAI project to GitHub.
 - [ ] Git initialized (`git init`)
 - [ ] Virtual environment created (`venv/`)
 - [ ] Dependencies installed (`pip install -r requirements.txt`)
-- [ ] Commit hooks configured (`.git/hooks/commit-msg.ps1`)
+- [ ] Husky hooks installed (`npm install`)
 - [ ] Test setup script passed (`python test_setup.py`)
 
 ### ✅ Configuration
@@ -176,9 +176,7 @@ Add to README.md after first workflow runs:
 - [ ] Try: `git push -u origin main --force` (ONLY for initial push!)
 
 ### Commit Hook Not Working?
-- [ ] Check hook exists: `Test-Path .git\hooks\commit-msg.ps1`
-- [ ] Re-run: `.\scripts\setup_hooks.ps1`
-- [ ] Verify git config: `git config core.hooksPath`
+- [ ] Reinstall hooks: `npm install`
 
 ## Success Criteria
 

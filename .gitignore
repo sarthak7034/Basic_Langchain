@@ -119,6 +119,7 @@ site/
 *~
 
 # Package manager
+node_modules/
 poetry.lock
 Pipfile.lock
 

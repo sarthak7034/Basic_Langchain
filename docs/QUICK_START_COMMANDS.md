@@ -102,9 +102,8 @@ start https://github.com/YOUR_USERNAME/AgentAI/compare/test/pr-workflow?expand=1
 ## Verify Everything Works
 
 ```powershell
-# Check local commit hook
-Test-Path .git\hooks\commit-msg.ps1
-# Should return: True
+# Install local commit hook
+npm install
 
 # Check remote is set
 git remote -v
@@ -157,10 +156,7 @@ git credential-manager delete https://github.com
 
 ```powershell
 # Reinstall hooks
-.\scripts\setup_hooks.ps1
-
-# Verify installation
-Test-Path .git\hooks\commit-msg.ps1
+npm install
 
 # Try commit again
 git commit -m "test: verify hook"

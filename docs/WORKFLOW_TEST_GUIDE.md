@@ -213,10 +213,10 @@ git push -u origin main
 
 ```powershell
 # Verify hook exists
-Test-Path .git\hooks\commit-msg.ps1
+npm install
 
 # If false, run:
-.\scripts\setup_hooks.ps1
+npm install
 
 # Try commit again
 ```
