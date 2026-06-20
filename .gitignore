@@ -27,6 +27,11 @@ venv.bak/
 .env.local
 .env.*.local
 
+# NPM Configuration (with tokens)
+.npmrc.local
+.npmrc.user
+.npmrc
+
 # IDEs
 .vscode/
 .idea/

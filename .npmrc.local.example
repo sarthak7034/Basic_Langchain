@@ -1,0 +1,12 @@
+# Local NPM Configuration Example
+# Copy this to .npmrc.local and add your token
+# NEVER commit .npmrc.local to git!
+
+# GitHub Package Registry
+@YOUR_GITHUB_USERNAME:registry=https://npm.pkg.github.com/
+
+# Replace TOKEN_HERE with your actual GitHub token
+//npm.pkg.github.com/:_authToken=TOKEN_HERE
+
+# For GitHub Actions, use environment variable instead:
+# //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}

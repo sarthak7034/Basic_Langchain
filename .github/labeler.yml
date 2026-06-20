@@ -1,0 +1,42 @@
+# Configuration for PR Labeler
+# Labels PRs based on changed files
+
+'documentation':
+  - '**/*.md'
+  - 'docs/**/*'
+
+'examples':
+  - 'examples/**/*'
+
+'projects':
+  - 'projects/**/*'
+
+'dependencies':
+  - 'requirements.txt'
+  - 'setup.py'
+  - 'pyproject.toml'
+
+'ci/cd':
+  - '.github/**/*'
+
+'configuration':
+  - '.gitignore'
+  - '.env.example'
+  - '*.json'
+  - '*.yaml'
+  - '*.yml'
+
+'agents':
+  - '**/*agent*.py'
+
+'rag':
+  - '**/*rag*.py'
+  - '**/chatbot.py'
+
+'tools':
+  - '**/tools/**/*'
+  - '**/*tool*.py'
+
+'tests':
+  - 'tests/**/*'
+  - '**/*test*.py'
