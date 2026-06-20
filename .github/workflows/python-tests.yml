@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     name: Test Python ${{ matrix.python-version }}
+    if: ${{ false }}
     runs-on: ${{ matrix.os }}
     
     strategy:

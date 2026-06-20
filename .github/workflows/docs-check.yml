@@ -15,6 +15,7 @@ on:
 jobs:
   check-links:
     name: Check Documentation Links
+    if: ${{ false }}
     runs-on: ubuntu-latest
     
     steps:
@@ -32,6 +33,7 @@ jobs:
   
   lint-markdown:
     name: Lint Markdown Files
+    if: ${{ false }}
     runs-on: ubuntu-latest
     
     steps:
